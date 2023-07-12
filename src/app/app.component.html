@@ -1,0 +1,23 @@
+<mat-drawer-container class="example-container" autosize>
+
+
+  <div class="example-sidenav-content">
+    <app-navigation (sidebarSubmitter)="drawer.toggle()"></app-navigation>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+  </div>
+  <mat-drawer position="end" #drawer class="" mode="push">
+    <div class="position-relative m-3" style="width: 250px; height: 100vh;">
+      <div class="position-fixed w-100">
+        <mat-list>
+          <ng-container *ngFor="let menu of listMenus || []; let isLast = last">
+            <mat-list-item style="cursor: pointer">
+              <a (click)="onChangePage(menu.link); drawer.toggle()" class="text-dark text-decoration-none">{{menu.name}}</a>
+            </mat-list-item>
+            <mat-divider *ngIf="!isLast"></mat-divider>
+          </ng-container>
+        </mat-list>
+      </div>
+    </div>
+  </mat-drawer>
+</mat-drawer-container>

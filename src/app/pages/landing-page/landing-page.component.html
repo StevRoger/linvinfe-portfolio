@@ -1,0 +1,116 @@
+<div class="container pt-5">
+  <div class="row pt-5">
+    <div class="col-12 col-md-6 d-flex align-items-center">
+      <div class="">
+        <h3 class="fw-bold">សូមស្វាគមន៍មកកាន់វេបសាយ LinVin Fe </h3>
+        <p class="mb-3">នេះជាការចែករំលែកសម្រាប់បងប្អូនដៃចាស់ថ្មីដែលគាត់ពិបាករកសេវាកម្ម ឬ ទិញលក់ផ្សេងៗ អាចរកតាមរយៈ <span
+          class="fw-semibold">links</span>
+          ខាងក្រោមនេះដោយប្រុងប្រយ័ត្នខ្លួនឯង។ កុំឲ្យបងប្អូនពិបាកឆាតសួរខ្ញុំ
+          ហើយនេះជាការចែករំលែករបស់ខ្ញុំតាំងពីដើមមកដោយមិនប៉ះពាល់ឆ្នាំងចានរបស់អ្នកណាមួយឡើយ</p>
+        <button mat-flat-button color="primary" class="px-4">តោះរៀន</button>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+      <img src="assets/image/Linvinfe-2.png" class="w-100 h-auto object-fit-contain" alt="">
+    </div>
+  </div>
+</div>
+
+<div class="block-yl">
+  <div class="container py-5">
+    <div class="row g-3">
+      <div class="col-12 mb-3">
+        <h3 class="fw-medium">ជំនាញផ្នែក</h3>
+        <p>Everything you need to know to start and grow your own online business.</p>
+      </div>
+      <div class="col-12 col-md-4" *ngFor="let service of listService || []">
+        <mat-card>
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image">
+              <img [src]="service.logo" class="h-auto w-100" alt="facebook-watch-logo">
+            </div>
+            <mat-card-title>{{service.name}}</mat-card-title>
+            <mat-card-subtitle>{{service.category}}</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="assets/logo/library.png" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>{{service.desc}}</p>
+          </mat-card-content>
+          <!--          <mat-card-actions>-->
+          <!--            <button mat-button>Learn</button>-->
+          <!--          </mat-card-actions>-->
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="quote-block">
+  <div class="container">
+    <div class="row py-5">
+      <div class="col-12 text-white">
+        <h3 class="fw-medium mb-4">ពាក្យក្នុងចិត្ត</h3>
+        <p style="font-size: 4rem">" ការចែករំលែកចំណេះដឹងជាកាតព្វកិច្ចរបស់ខ្ញុំ អ្នកណាមើលមិនឃើញពីតម្លៃខ្ញុំជារឿងរបស់គេ
+          "</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="block-yl">
+  <div class="container">
+    <div class="row g-3 py-5">
+      <div class="col-12">
+        <h3 class="fw-medium">ទំនិញពិសេស</h3>
+        <p>Everything you need to know to start and grow your own online business.</p>
+      </div>
+      <div class="col-12 col-md-6">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <mat-card-title>Special Member (VIP CARD)</mat-card-title>
+            <mat-card-subtitle>Special Item</mat-card-subtitle>
+            <mat-card-subtitle>
+              កាតសម៉ាជិកពិសេសសម្រាប់បងប្អួនដែលខាងយើងខ្ញុំឃើញអ្នកលក់ណាមួយល្អ មានទំនួលខុសត្រូវខ្ពស់ មិនមានការបោកប្រាក់ យើងខ្ញុំនឹងរើសចូលជាសម៉ាជិកពិសេស ដើម្បីឲ្យបងប្អូនបានលក់ក្នុងវេបសាយដោយសររី។
+            </mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="assets/products/card.png" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+              Not only that We will be special select people who is honestly, responsible, active, no cheat ( not break
+              other people trust ) for their work. We will be choose that person as our special member for everyone to
+              be trust and can contact them for your service on this website as well. so you don't need to worry where
+              to buy, scare them scam on you. just be free and happy to buy what you want.
+            </p>
+          </mat-card-content>
+          <!--<mat-card-actions>
+            <button mat-button>Join</button>
+          </mat-card-actions>-->
+        </mat-card>
+      </div>
+      <div class="col-12 col-md-6">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <mat-card-title>Limited Edition T-Shirt (MMO PRIVATE)</mat-card-title>
+            <mat-card-subtitle>Clothing</mat-card-subtitle>
+            <mat-card-subtitle>សម្រាប់បងប្អូនដែលចង់បានអាវក្រុម MMO PRIVATE
+              យើងនឹងរៀបចំទទួលកម្មង់ឆាប់ៗនេះ ថែមលើពីនេះទៀត នឹងចេញអាវក្រុមយើងខ្ញុំវគ្គ២ កាន់តែស្អាតថែមទៀត។</mat-card-subtitle>
+          </mat-card-header>
+          <img mat-card-image src="assets/products/shirt.png" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+              For everyone who interest on MMO PRIVATE shirt we will be open order soon. It’s more unique and gorgeous than before. It’s open for part II order
+            </p>
+          </mat-card-content>
+          <!--mat-card-actions>
+            <button mat-button>Buy</button>
+          </mat-card-actions>-->
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

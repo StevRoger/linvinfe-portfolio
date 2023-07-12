@@ -1,0 +1,18 @@
+<div class="px-0 position-fixed w-100 z-3"
+     [ngClass]="{'bg-transparent': scrollOffset < 20, 'bg-white shadow-sm': scrollOffset > 20}"
+>
+  <mat-toolbar class="container bg-transparent">
+    <div class="d-flex justify-content-between w-100">
+      <div class="my-auto" style="cursor: pointer" (click)="onLogoClick()">
+        <img src="assets/logo/logo-dark.png" width="auto" height="45px" alt="">
+      </div>
+      <div class="my-auto">
+        <div>
+          <button (click)="onOpenSidebar()" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <mat-icon>menu</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </mat-toolbar>
+</div>
