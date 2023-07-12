@@ -3,7 +3,7 @@
     <mat-card-title>{{partner.name}}</mat-card-title>
     <mat-card-subtitle>
       <ng-container *ngFor="let s of getRange(partner.rating)">
-        <i class="bi bi-star-fill"></i>
+        <i class="bi bi-star-fill star-gold"></i>
       </ng-container>
     </mat-card-subtitle>
     <img mat-card-md-image [src]="partner.profile" class="rounded-1 object-fit-cover" alt="">
