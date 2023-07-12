@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {GoogleAuthService} from "../../service/google-auth.service";
+import {Component, OnInit} from '@angular/core';
+import {GoogleSheetsDbService} from "ng-google-sheets-db";
+import {environment} from "../../../environments/environment";
+import {Partner, partnerAttributesMapping} from "../../service/sheet.model";
 
 @Component({
   selector: 'app-shop-reseller-page',
@@ -50,18 +51,42 @@ export class ShopResellerPageComponent implements OnInit {
       link: 'https://www.rttpanel.com/'
     }
   ]
+
+  listResellersAutoApprovePage: Partner[] = [];
+  listResellersFollowPage: Partner[] = [];
+  listResellersFullSetupPage: Partner[] = [];
+  listBots: Partner[] = [];
+  listGroups: Partner[] = [];
+  listSellAccountBoost: Partner[] = [];
+  listSellMail: Partner[] = [];
   constructor(
-    private googleAuthService: GoogleAuthService,
+    private googleSheetsDbService: GoogleSheetsDbService,
   ) { }
 
   ngOnInit(): void {
-    // const sheetId = '1wtoxLlIzzNyKnFWURKDrehvwUvabvIH75rRjV6W2G6Y';
-    // const url = `https://docs.google.com/spreadsheets/d/${sheetId}/export?format=json`;
-    //
-    // this.http.get(url).subscribe(response => {
-    //   console.log(JSON.parse(response as string))
-    // });
-
+    this.googleSheetsDbService.getActive<Partner>(environment.sellerAutoApprovePage.spreadsheetId, environment.sellerAutoApprovePage.worksheetName, partnerAttributesMapping, 'Active').subscribe(res => {
+      this.listResellersAutoApprovePage = res ?? [];
+    });
+    this.googleSheetsDbService.getActive<Partner>(environment.resellerPageFollowService.spreadsheetId, environment.resellerPageFollowService.worksheetName, partnerAttributesMapping, 'Active').subscribe(res => {
+      this.listResellersFollowPage = res ?? [];
+    });
+    this.googleSheetsDbService.getActive<Partner>(environment.resellerPageFullSetup.spreadsheetId, environment.resellerPageFullSetup.worksheetName, partnerAttributesMapping, 'Active').subscribe(res => {
+      this.listResellersFullSetupPage = res ?? [];
+    });
+    this.googleSheetsDbService.getActive<Partner>(environment.resellerBot.spreadsheetId, environment.resellerBot.worksheetName, partnerAttributesMapping, 'Active').subscribe(res => {
+      this.listBots = res ?? [];
+    });
+    this.googleSheetsDbService.getActive<Partner>(environment.resellerGroup.spreadsheetId, environment.resellerGroup.worksheetName, partnerAttributesMapping, 'Active').subscribe(res => {
+      this.listGroups = res ?? [];
+    });
+    this.googleSheetsDbService.getActive<Partner>(environment.resellerAccountBoost.spreadsheetId, environment.resellerAccountBoost.worksheetName, partnerAttributesMapping, 'Active').subscribe(res => {
+      this.listSellAccountBoost = res ?? [];
+    });
+    this.googleSheetsDbService.getActive<Partner>(environment.resellerMail.spreadsheetId, environment.resellerMail.worksheetName, partnerAttributesMapping, 'Active').subscribe(res => {
+      this.listSellMail = res ?? [];
+    });
   }
 
+
+  protected readonly Number = Number;
 }

@@ -1,0 +1,19 @@
+<mat-card class="example-card">
+  <mat-card-title-group class="mb-3">
+    <mat-card-title>{{partner.name}}</mat-card-title>
+    <mat-card-subtitle>
+      <ng-container *ngFor="let s of getRange(partner.rating)">
+        <i class="bi bi-star-fill"></i>
+      </ng-container>
+    </mat-card-subtitle>
+    <img mat-card-md-image [src]="partner.profile" class="rounded-1 object-fit-cover" alt="">
+  </mat-card-title-group>
+  <mat-card-content>
+    {{partner.skill1}}
+  </mat-card-content>
+  <mat-card-actions>
+    <a [href]="partner.messenger" *ngIf="partner.messenger" target="_blank" mat-button>Contact<i class="bi bi-facebook ms-1"></i></a>
+    <a [href]="partner.telegram" *ngIf="partner.telegram" target="_blank" mat-button>Contact<i class="bi bi-telegram ms-1"></i></a>
+    <a [href]="partner.whatsapp" *ngIf="partner.whatsapp" target="_blank" mat-button>Contact<i class="bi bi-whatsapp ms-1"></i></a>
+  </mat-card-actions>
+</mat-card>

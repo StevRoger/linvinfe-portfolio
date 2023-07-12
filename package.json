@@ -24,6 +24,7 @@
     "bootstrap-icons": "^1.10.5",
     "firebase-tools": "^12.4.3",
     "googleapis": "^121.0.0",
+    "ng-google-sheets-db": "^2.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

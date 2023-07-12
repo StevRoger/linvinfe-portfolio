@@ -10,7 +10,7 @@ export class GoogleAuthService {
 
   constructor() { }
 
-  private readonly clientId = '102743688519978274168'; // Replace with your own client ID
+  private readonly clientId = '507060415453-nb53p4gcjllp293ld06b7p08vs8phkok.apps.googleusercontent.com'; // Replace with your own client ID
   private readonly scope = 'https://www.googleapis.com/auth/spreadsheets.readonly';
   private readonly discoveryDocs = ['https://sheets.googleapis.com/$discovery/rest?version=v4'];
   private auth2: any;
@@ -42,3 +42,6 @@ export class GoogleAuthService {
     this.auth2.signOut();
   }
 }
+//https://chat.openai.com/share/b51b0cdc-ce5a-4473-88dd-06af0c97e477
+//https://github.com/FranzDiebold/ng-google-sheets-db-library
+//https://console.cloud.google.com/apis/api/sheets.googleapis.com/credentials?authuser=2&project=linvinfe-portfolio&supportedpurview=project

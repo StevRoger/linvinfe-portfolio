@@ -1,23 +1,11 @@
 <div class="container py-5">
   <div class="row pt-5 g-3">
     <div class="col-12">
-      <h3 class="fw-medium">Partners Affiliate - Auto Approve Page | អ្នកលក់ Page Auto Approve</h3>
+      <h4 class="fw-medium">Auto Approve Page | អ្នកលក់ Page Auto Approve</h4>
       <p>Trusted partners around the world.</p>
     </div>
-    <div class="col-12 col-md-4" *ngFor="let partner of listPartners || []">
-      <mat-card class="example-card">
-        <mat-card-title-group class="mb-3">
-          <mat-card-title>{{partner.name}}</mat-card-title>
-          <mat-card-subtitle>{{partner.position}}</mat-card-subtitle>
-          <img mat-card-md-image [src]="partner.picture" class="rounded-1 object-fit-cover" alt="">
-        </mat-card-title-group>
-        <mat-card-content>
-          {{partner.desc}}
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button>Contact</button>
-        </mat-card-actions>
-      </mat-card>
+    <div class="col-12 col-md-4" *ngFor="let partner of listResellersAutoApprovePage || []">
+      <app-partner [partner]="partner"></app-partner>
     </div>
   </div>
 </div>
@@ -26,23 +14,11 @@
   <div class="container py-5">
     <div class="row g-3">
       <div class="col-12">
-        <h3 class="fw-medium">Partners Affiliate - Page Follow | អ្នកលក់សេវាកម្មចាក់ Follow Page</h3>
+        <h4 class="fw-medium">Page Follow | អ្នកលក់សេវាកម្មចាក់ Follow Page</h4>
         <p>Trusted partners around the world.</p>
       </div>
-      <div class="col-12 col-md-4" *ngFor="let partner of listPartners || []">
-        <mat-card class="example-card">
-          <mat-card-title-group class="mb-3">
-            <mat-card-title>{{partner.name}}</mat-card-title>
-            <mat-card-subtitle>{{partner.position}}</mat-card-subtitle>
-            <img mat-card-md-image [src]="partner.picture" class="rounded-1 object-fit-cover" alt="">
-          </mat-card-title-group>
-          <mat-card-content>
-            {{partner.desc}}
-          </mat-card-content>
-          <mat-card-actions>
-            <button mat-button>Contact</button>
-          </mat-card-actions>
-        </mat-card>
+      <div class="col-12 col-md-4" *ngFor="let partner of listResellersFollowPage || []">
+        <app-partner [partner]="partner"></app-partner>
       </div>
     </div>
   </div>
@@ -51,23 +27,11 @@
 <div class="container">
   <div class="row g-3 py-5">
     <div class="col-12">
-      <h3 class="fw-medium">Partners Affiliate - Page Full Setup | អ្នកលក់ Page Full Setup</h3>
+      <h4 class="fw-medium">Page Full Setup | អ្នកលក់ Page Full Setup</h4>
       <p>Trusted partners around the world.</p>
     </div>
-    <div class="col-12 col-md-4" *ngFor="let partner of listPartners || []">
-      <mat-card class="example-card">
-        <mat-card-title-group class="mb-3">
-          <mat-card-title>{{partner.name}}</mat-card-title>
-          <mat-card-subtitle>{{partner.position}}</mat-card-subtitle>
-          <img mat-card-md-image [src]="partner.picture" class="rounded-1 object-fit-cover" alt="">
-        </mat-card-title-group>
-        <mat-card-content>
-          {{partner.desc}}
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-button>Contact</button>
-        </mat-card-actions>
-      </mat-card>
+    <div class="col-12 col-md-4" *ngFor="let partner of listResellersFullSetupPage || []">
+      <app-partner [partner]="partner"></app-partner>
     </div>
   </div>
 </div>
@@ -76,36 +40,12 @@
   <div class="container">
     <div class="row py-5">
       <div class="col-12">
-        <h3 class="fw-medium">Follow Bots | Bot ទិញ follow</h3>
+        <h4 class="fw-medium">Follow Bots | Bot ទិញ follow</h4>
         <p>Everything you need to know to start and grow your own online business.</p>
       </div>
-      <mat-card>
-        <table class="table table-striped table-hover">
-          <thead>
-          <tr>
-            <th scope="col">Name</th>
-            <th scope="col">Quality</th>
-            <th scope="col">Recommend</th>
-            <th scope="col">Website</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr *ngFor="let bot of listWebsiteBots">
-            <td>{{bot.name}}</td>
-            <td>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-            </td>
-            <td>{{bot.recommend ? 'Yes' : 'No'}}</td>
-            <td>
-              <a [href]="bot.link" target="_blank">Visit</a>
-            </td>
-          </tr>
-          </tbody>
-        </table>
-      </mat-card>
+      <div class="col-12">
+        <app-table [list]="listBots"></app-table>
+      </div>
     </div>
   </div>
 </div>
@@ -114,36 +54,12 @@
 <div class="container">
   <div class="row py-5">
     <div class="col-12">
-      <h3 class="fw-medium">Facebook Group Buy/Sell | Facebook Group ទិញ/លក់</h3>
+      <h4 class="fw-medium">Facebook Group Buy/Sell | Facebook Group ទិញ/លក់</h4>
       <p>Everything you need to know to start and grow your own online business.</p>
     </div>
-    <mat-card>
-      <table class="table table-striped table-hover">
-        <thead>
-        <tr>
-          <th scope="col">Name</th>
-          <th scope="col">Quality</th>
-          <th scope="col">Recommend</th>
-          <th scope="col">Website</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let bot of listWebsiteBots">
-          <td>{{bot.name}}</td>
-          <td>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-          </td>
-          <td>{{bot.recommend ? 'Yes' : 'No'}}</td>
-          <td>
-            <a [href]="bot.link" target="_blank">Visit</a>
-          </td>
-        </tr>
-        </tbody>
-      </table>
-    </mat-card>
+    <div class="col-12">
+      <app-table [list]="listGroups"></app-table>
+    </div>
   </div>
 </div>
 
@@ -151,36 +67,12 @@
 <div class="container">
   <div class="row py-5">
     <div class="col-12">
-      <h3 class="fw-medium">Boost Account For Sale | អ្នកលក់ Account សម្រាប់ Boost</h3>
+      <h4 class="fw-medium">Boost Account For Sale | អ្នកលក់ Account សម្រាប់ Boost</h4>
       <p>Everything you need to know to start and grow your own online business.</p>
     </div>
-    <mat-card>
-      <table class="table table-striped table-hover">
-        <thead>
-        <tr>
-          <th scope="col">Name</th>
-          <th scope="col">Quality</th>
-          <th scope="col">Recommend</th>
-          <th scope="col">Website</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let bot of listWebsiteBots">
-          <td>{{bot.name}}</td>
-          <td>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-          </td>
-          <td>{{bot.recommend ? 'Yes' : 'No'}}</td>
-          <td>
-            <a [href]="bot.link" target="_blank">Visit</a>
-          </td>
-        </tr>
-        </tbody>
-      </table>
-    </mat-card>
+    <div class="col-12">
+      <app-table [list]="listSellAccountBoost"></app-table>
+    </div>
   </div>
 </div>
 
@@ -188,36 +80,12 @@
   <div class="container">
     <div class="row py-5">
       <div class="col-12">
-        <h3 class="fw-medium">Hotmail For Sale | Website លក់ Hotmail</h3>
+        <h4 class="fw-medium">Hotmail For Sale | Website លក់ Hotmail</h4>
         <p>Everything you need to know to start and grow your own online business.</p>
       </div>
-      <mat-card>
-        <table class="table table-striped table-hover">
-          <thead>
-          <tr>
-            <th scope="col">Name</th>
-            <th scope="col">Quality</th>
-            <th scope="col">Recommend</th>
-            <th scope="col">Website</th>
-          </tr>
-          </thead>
-          <tbody>
-          <tr *ngFor="let bot of listWebsiteBots">
-            <td>{{bot.name}}</td>
-            <td>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-            </td>
-            <td>{{bot.recommend ? 'Yes' : 'No'}}</td>
-            <td>
-              <a [href]="bot.link" target="_blank">Visit</a>
-            </td>
-          </tr>
-          </tbody>
-        </table>
-      </mat-card>
+      <div class="col-12">
+        <app-table [list]="listSellMail"></app-table>
+      </div>
     </div>
   </div>
 </div>

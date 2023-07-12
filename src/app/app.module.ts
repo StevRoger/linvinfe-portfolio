@@ -20,6 +20,10 @@ import { ExperiencePageComponent } from './pages/experience-page/experience-page
 import { AboutPageComponent } from './pages/about-page/about-page.component';
 import { SupporterPageComponent } from './pages/supporter-page/supporter-page.component';
 import {HttpClientModule} from "@angular/common/http";
+import { API_KEY, GoogleSheetsDbService } from 'ng-google-sheets-db';
+import {environment} from "../environments/environment";
+import { PartnerComponent } from './components/partner/partner.component';
+import { TableComponent } from './components/table/table.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,9 @@ import {HttpClientModule} from "@angular/common/http";
     MakeMoneyOnlinePageComponent,
     ExperiencePageComponent,
     AboutPageComponent,
-    SupporterPageComponent
+    SupporterPageComponent,
+    PartnerComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +52,13 @@ import {HttpClientModule} from "@angular/common/http";
     MatListModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: API_KEY,
+      useValue: environment.googleSheetsApiKey,
+    },
+    GoogleSheetsDbService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
