@@ -34,8 +34,11 @@
           </mat-card-header>
           <img mat-card-image src="assets/logo/library.png" alt="Photo of a Shiba Inu">
           <mat-card-content>
-            <p>{{service.desc}}</p>
+            <p [innerHTML]="service.desc"></p>
           </mat-card-content>
+          <mat-card-actions>
+            <a mat-flat-button class="text-primary" [routerLink]="service.link">ចូលមើលមេរៀន</a>
+          </mat-card-actions>
         </mat-card>
       </div>
     </div>
@@ -46,8 +49,8 @@
   <div class="container">
     <div class="row py-5">
       <div class="col-12 text-white">
-        <h3 class="fw-medium mb-4">Quotes</h3>
-        <p style="font-size: 2.5rem">"ការចែករំលែកចំណេះដឹងជាកាតព្វកិច្ចរបស់ខ្ញុំ អ្នកណាមើលមិនឃើញពីតម្លៃខ្ញុំជារឿងរបស់គេ"</p>
+        <h3 class="fw-medium">Quotes</h3>
+        <p style="font-size: 1.5rem">"ការចែករំលែកចំណេះដឹងជាកាតព្វកិច្ចរបស់ខ្ញុំ អ្នកណាមើលមិនឃើញពីតម្លៃខ្ញុំជារឿងរបស់គេ"</p>
       </div>
     </div>
   </div>
@@ -79,9 +82,9 @@
               to buy, scare them scam on you. just be free and happy to buy what you want.
             </p>
           </mat-card-content>
-          <!--<mat-card-actions>
-            <button mat-button>Join</button>
-          </mat-card-actions>-->
+          <mat-card-actions>
+            <a mat-flat-button target="_blank" class="text-primary" href="https://t.me/Linvinfe">ចូលរួមជាសមាជិក</a>
+          </mat-card-actions>
         </mat-card>
       </div>
       <div class="col-12 col-md-6">
@@ -89,7 +92,7 @@
           <mat-card-header>
             <mat-card-title>Limited Edition T-Shirt (MMO PRIVATE)</mat-card-title>
             <mat-card-subtitle>Clothing</mat-card-subtitle>
-            <mat-card-subtitle>សម្រាប់បងប្អូនដែលចង់បានអាវក្រុម MMO PRIVATE
+            <mat-card-subtitle>សម្រាប់បងប្អូនដែលចង់បានអាវក្រុម <span class="fw-semibold">MMO PRIVATE</span>
               យើងនឹងរៀបចំទទួលកម្មង់ឆាប់ៗនេះ ថែមលើពីនេះទៀត នឹងចេញអាវក្រុមយើងខ្ញុំវគ្គ២ កាន់តែស្អាតថែមទៀត។</mat-card-subtitle>
           </mat-card-header>
           <img mat-card-image src="assets/products/shirt.png" alt="Photo of a Shiba Inu">
@@ -98,9 +101,9 @@
               For everyone who interest on MMO PRIVATE shirt we will be open order soon. It’s more unique and gorgeous than before. It’s open for part II order
             </p>
           </mat-card-content>
-          <!--mat-card-actions>
-            <button mat-button>Buy</button>
-          </mat-card-actions>-->
+          <mat-card-actions>
+            <a mat-flat-button target="_blank" class="text-primary" href="https://t.me/Linvinfe">ទាក់ទងទិញអាវ</a>
+          </mat-card-actions>
         </mat-card>
       </div>
     </div>
